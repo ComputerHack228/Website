@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Copy it and paste in discord ‮j'ai 12 an
-          </title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #555;
-        }
-    </style>
-</body>
-</html>
+<button id="downloadBtn" class="download-btn">Download Text File copy it and paste it to discord</button>
+
+<script>
+document.getElementById('downloadBtn').addEventListener('click', function() {
+    // Create a temporary link element
+    const link = document.createElement('a');
+    link.href = 'myfile.txt';
+    link.download = 'myfile.txt'; // You can rename the downloaded file here
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+</script>
